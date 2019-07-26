@@ -1,4 +1,6 @@
 import random
+#Considering initing with a value and flipping reassigns a random value
+
 class Coin():
 	def flip(self):
 		Outcomes = {
