@@ -5,8 +5,6 @@ from game import Game
 from file import File
 import json
 
-resultsJSON = {}
-resultsJSON['run'] = []
 i=1
 coin = Coin()
 dice = Dice()
