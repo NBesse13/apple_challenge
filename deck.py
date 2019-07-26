@@ -1,8 +1,8 @@
 import random
 
 suits = ['clubs', 'hearts', 'spades', 'diamonds']
-# values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10' ,'J', 'Q', 'K']
-values = ['A', 'J']
+values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10' ,'J', 'Q', 'K']
+# values = ['A', 'J']
 
 class Card:
 	def __init__(self,suit,value):
@@ -34,9 +34,3 @@ class Deck(Card):
 
 	def returnCard(self, pick):
 		return self.cards.append(pick)
-
-# deck = Deck()
-# deck.shuffle()
-# pick = deck.pickFirst()
-
-
