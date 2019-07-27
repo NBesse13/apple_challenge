@@ -5,6 +5,7 @@ from game import Game
 from file import File
 import json
 
+#Initializing class instances required and try counter, useful for debugging and statistic calculations
 i=1
 coin = Coin()
 dice = Dice()
@@ -12,22 +13,26 @@ deck = Deck()
 game = Game()
 file = File()
 
-#There's a better way to enter the while loop, for sure
-#Need to keep running until a win condition is reached
 outcome = "Lose"
-
+#Keep playing until win
 while outcome == "Lose":
-
+	#Retrieving coin flip and dice roll value
 	coinFlip = coin.flip()
 	diceRoll = dice.roll()
 
+	#Shuffling the deck and picking the first card
 	deck.shuffle()
 	cardPick = deck.pickFirst()
+
+	#Passing the values to the game class for checking outcome
 	outcome = game.check(coinFlip,diceRoll, cardPick.show())
 
+	#Building the JSON object to write to output file
 	file.buildJSON(i,coinFlip,diceRoll, cardPick.show(),outcome)
 
+	#Returning the top card to the bottom of the pile
 	deck.returnCard(cardPick)
 	i+=1
 
+#Writing the full JSON object to the file
 file.write()

@@ -1,7 +1,7 @@
 import random
-#Considering initing with a value and flipping reassigns a random value
 
 class Coin():
+	#Random heads/tails output
 	def flip(self):
 		Outcomes = {
 		'1': "heads",
