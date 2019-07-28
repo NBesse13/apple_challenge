@@ -35,7 +35,6 @@ while outcome == "Lose":
 		#Returning the top card to the bottom of the pile
 		deck.returnCard(cardPick)
 		i+=1
-		time.sleep(1)
 	except KeyboardInterrupt:
 		file.keyboardInterrupt(i)
 		file.write()
