@@ -1,5 +1,6 @@
 import json
-#File Object Handler
+
+#File Object Handler Init
 resultsJSON = {}
 resultsJSON['run'] = []
 

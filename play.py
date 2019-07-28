@@ -3,7 +3,6 @@ from coin import Coin
 from deck import Deck, Card
 from game import Game
 from file import File
-import time 
 import json
 
 #Initializing class instances required and try counter, useful for debugging and statistic calculations
@@ -39,7 +38,6 @@ while outcome == "Lose":
 		file.keyboardInterrupt(i)
 		file.write()
 		raise 
-
 
 #Writing the full JSON object to the file
 file.write()
