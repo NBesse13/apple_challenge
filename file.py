@@ -1,5 +1,6 @@
 import json
-#File Object Handler
+
+#File Object Handler Init
 resultsJSON = {}
 resultsJSON['run'] = []
 
@@ -15,6 +16,15 @@ class File:
 		}
 
 		resultsJSON['run'].append(outcomeDict) 
+
+	def keyboardInterrupt(self,tryNumber):
+
+		interruptMsg = {
+			'try': tryNumber,
+			'message': "Keyboard Interrupt on Try: " + str(tryNumber)
+		}
+
+		resultsJSON['run'].append(interruptMsg)
 
 	#Writing the full JSON Object to results.txt
 	def write(self):

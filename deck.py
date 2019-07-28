@@ -1,6 +1,7 @@
 import random
 
-suits = ['clubs', 'hearts', 'spades', 'diamonds']
+#Determining suits and values of cards in the deck
+suits = ['clubs', 'diamonds', 'hearts', 'spades']
 values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10' ,'J', 'Q', 'K']
 
 class Card:
@@ -23,11 +24,6 @@ class Deck(Card):
 			for value in values:
 				self.cards.append(Card(suit,value))
 
-	#Used for test, shows the entire deck
-	def show(self):
-		for card in self.cards:
-			card.show()
-
 	def shuffle(self):
 		cards = random.shuffle(self.cards)
 
@@ -35,4 +31,4 @@ class Deck(Card):
 		return self.cards.pop(0)
 
 	def returnCard(self, pick):
-		return self.cards.append(pick)
+		self.cards.append(pick)

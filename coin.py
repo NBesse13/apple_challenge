@@ -1,8 +1,9 @@
 import random
 
+outcomes = ["heads", "tails"]
+
 class Coin():
 	#Random heads/tails output
 	def flip(self):
-		Outcomes = ["heads", "tails"]
-		outcome = Outcomes[random.randint(0,1)]
+		outcome = outcomes[random.randint(0,1)]
 		return outcome
