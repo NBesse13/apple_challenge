@@ -1,14 +1,14 @@
 import random
 
 suits = ['clubs', 'hearts', 'spades', 'diamonds']
-# values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10' ,'J', 'Q', 'K']
-values = ['A', 'J']
+values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10' ,'J', 'Q', 'K']
 
 class Card:
 	def __init__(self,suit,value):
 		self.suit = suit
 		self.value = value
 
+	#Stringifies the card object to use for comparison and recording
 	def show(self):
 		return ("{} of {}".format(self.value, self.suit))
 
@@ -17,11 +17,13 @@ class Deck(Card):
 		self.cards = []
 		self.build()
 
+	#Building a deck of 52 Cards
 	def build(self):
 		for suit in suits:
 			for value in values:
 				self.cards.append(Card(suit,value))
 
+	#Used for test, shows the entire deck
 	def show(self):
 		for card in self.cards:
 			card.show()
@@ -34,9 +36,3 @@ class Deck(Card):
 
 	def returnCard(self, pick):
 		return self.cards.append(pick)
-
-# deck = Deck()
-# deck.shuffle()
-# pick = deck.pickFirst()
-
-
