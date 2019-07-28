@@ -16,6 +16,7 @@ file = File()
 outcome = "Lose"
 #Keep playing until win
 while outcome == "Lose":
+
 	#Retrieving coin flip and dice roll value
 	coinFlip = coin.flip()
 	diceRoll = dice.roll()
